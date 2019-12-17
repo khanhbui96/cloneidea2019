@@ -37,7 +37,7 @@ const currencies1 = [
 ];
 const AddMotoBike = props => {
   const classes = useStyles();
-  const decode = jwt_decode(localStorage.getItem('jwt'));
+  const decode = localStorage.getItem('jwt') ? jwt_decode(localStorage.getItem('jwt')) : '';
   const {
     updateData,
     selectMotoBike,

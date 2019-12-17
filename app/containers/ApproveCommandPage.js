@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import { connect } from 'react-redux';
-import Wrapper from '../components/HostWrapper';
+import Wrapper from '../components/Wrapper';
 import Command from '../components/ApproveCommand/Command';
 import {addCommand, getAllCommand, selectCommand, deleteCommand, updateCommand} from '../actions/command.actions';
 

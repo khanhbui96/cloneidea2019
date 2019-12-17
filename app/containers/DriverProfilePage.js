@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import { connect } from 'react-redux';
-import Wrapper from '../components/HostWrapper';
+import Wrapper from '../components/Wrapper';
 import Profile from '../components/Driver/Profile';
 import {getErrs} from '../actions/erros.actions';
 import {

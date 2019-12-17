@@ -16,7 +16,7 @@ export const getAll = () => async dispatch => {
     try{
         await dispatch(loading());
         await setAuthHeader(localStorage.getItem('jwt'));
-        const vehicles = await callApi('get', '/vehicles/getAll', null);
+        const vehicles = await callApi('get', '/vehicles/getAll', null)
         await dispatch({
             type: GET_VEHICLES,
             payload: vehicles.data

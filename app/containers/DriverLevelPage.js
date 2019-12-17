@@ -1,7 +1,7 @@
 
 import React, {useEffect} from 'react'
 import { connect } from 'react-redux';
-import Wrapper from '../components/HostWrapper';
+import Wrapper from '../components/Wrapper';
 import Level from '../components/Driver/Level';
 
 import {

@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react'
 import { connect } from 'react-redux';
 import Wrapper from '../components/Wrapper';
-import HostAbout from "../components/HostAbout"
-import {getCurrentUser} from '../actions/user.actions'
+import OfflineAbout from "../components/OfflineAbout"
+import {getCurrentUser} from '../actions/user.actions';
 
 const mapStateToProps = state=>{
   return {
@@ -13,11 +13,10 @@ const mapStateToProps = state=>{
 const GuestAboutPage = (props)=>{
   const {getCurrentUser} = props
   useEffect(()=>{
-    
   }, [])
     return(
         <Wrapper>
-            <HostAbout/>
+            <OfflineAbout/>
         </Wrapper>
     )
 }

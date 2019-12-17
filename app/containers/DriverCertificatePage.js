@@ -2,7 +2,7 @@
 
 import React, {useEffect} from 'react'
 import { connect } from 'react-redux';
-import Wrapper from '../components/HostWrapper';
+import Wrapper from '../components/Wrapper';
 import Certificate from '../components/Driver/Certificate';
 import {
   getAll

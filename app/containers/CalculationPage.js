@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import { connect } from 'react-redux';
 import Wrapper from '../components/GuestWrapper';
+import OfflineWrapper from '../components/OfflineWrapper';
 import Calculation from '../components/Calculation/Calculation';
 import {getAll, selectDefineLevel} from '../actions/defineLevel.actions';
 
@@ -15,11 +16,19 @@ const CalculationPage = (props)=>{
   useEffect(()=>{
     getAll()
   }, [defineLevels.isUpdate])
+   if(localStorage.getItem('jwt')){
     return(
-        <Wrapper>
-            <Calculation defineLevelProps={props}/>
-        </Wrapper>
-    )
+      <Wrapper>
+          <Calculation defineLevelProps={props}/>
+      </Wrapper>
+  )
+   }else{
+    return(
+      <OfflineWrapper>
+          <Calculation defineLevelProps={props}/>
+      </OfflineWrapper>
+  )
+   }
 }
 export default connect(
   mapStateToProps,

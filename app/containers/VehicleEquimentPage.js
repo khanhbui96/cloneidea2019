@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import { connect } from 'react-redux';
-import Wrapper from '../components/HostWrapper';
+import Wrapper from '../components/Wrapper';
 import Equiment from '../components/Vehicle/Equiment';
 import {getAll, selectVehicle, updateVehicle} from '../actions/vehicle.actions';
 const mapStateToProps = state=>{

@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import { connect } from 'react-redux';
 import Wrapper from '../components/GuestWrapper';
+import OfflineWrapper from '../components/OfflineWrapper';
 import MotoBikeList from '../components/MotorBike/MotoBikeList';
 import {
   getAll,
@@ -24,11 +25,20 @@ const MotoBikePage = (props)=>{
   useEffect(()=>{
     getAll()
   }, [])
-    return(
+    
+    if(localStorage.getItem('jwt')){
+      return(
         <Wrapper>
             <MotoBikeList motoBikeProps={props} />
         </Wrapper>
     )
+     }else{
+      return(
+        <OfflineWrapper>
+            <MotoBikeList motoBikeProps={props} />
+        </OfflineWrapper>
+    )
+     }
 }
 export default connect(
   mapStateToProps,

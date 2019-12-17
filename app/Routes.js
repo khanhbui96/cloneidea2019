@@ -19,6 +19,8 @@ import DefineLevelPage from './containers/DefineLevelPage';
 import RegisterCommandPage from './containers/RegisterCommandPage';
 import ApproveCommandPage from './containers/ApproveCommandPage'
 import MotobikePage from './containers/MotobikePage';
+import Home from './components/Home';
+import OfflinePage from './containers/OfflinePage';
 
 export default () => (
   <App>
@@ -39,7 +41,9 @@ export default () => (
       <Route path='/guest/select' component={SelectCarPage}/>
       <Route path='/guest' component={GuestAboutPage}/>
       <Route path='/register' component={RegisterPage}/>
-      <Route path='/' component={LoginPage}/>
+      <Route path='/login' component={LoginPage}/>
+      <Route path='/offline' component={OfflinePage}/>
+      <Route path='/' component={Home}/>
     </Switch>
   </App>
 );

@@ -67,10 +67,6 @@ function Login(props) {
     setOpen2(false);
   };
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
   const handleClose = () => {
     setOpen(false);
   };
@@ -180,6 +176,15 @@ function Login(props) {
               }}
             >
               Đăng kí
+            </Link>{' '}
+            hoặc <Link
+              to="/"
+              style={{ color: 'blue' }}
+              onClick={() => {
+                getErrs({});
+              }}
+            >
+              Quay lại
             </Link>
             ){' '}
           </Typography>
