@@ -2007,6 +2007,13 @@
     npmlog "^4.1.2"
     write-file-atomic "^2.3.0"
 
+"@marshallofsound/electron-router@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@marshallofsound/electron-router/-/electron-router-1.2.3.tgz#96c65b8cf54919cf76bb100950e376ff8862feb6"
+  integrity sha1-lsZbjPVJGc92uxAJUON2/4hi/rY=
+  dependencies:
+    path-to-regexp "^1.6.0"
+
 "@material-ui/core@^4.3.2":
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.4.0.tgz#820b6ee91da9eaf4018ff9e87e6ca04fc985e35a"
@@ -12234,6 +12241,13 @@ path-to-regexp@0.1.7:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-0.1.7.tgz#df604178005f522f15eb4490e7247a1bfaa67f8c"
   integrity sha1-32BBeABfUi8V60SQ5yR6G/qmf4w=
+
+path-to-regexp@^1.6.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-1.8.0.tgz#887b3ba9d84393e87a0a0b9f4cb756198b53548a"
+  integrity sha512-n43JRhlUKUAlibEJhPeir1ncUID16QnEjNpwzNdO3Lm4ywrBpBZ5oLD0I6br9evr1Y9JTqwRtAh7JLoOzAQdVA==
+  dependencies:
+    isarray "0.0.1"
 
 path-to-regexp@^1.7.0:
   version "1.7.0"

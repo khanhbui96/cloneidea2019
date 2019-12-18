@@ -12,6 +12,7 @@
  */
 import { app, BrowserWindow } from 'electron';
 import { autoUpdater } from 'electron-updater';
+import { Router } from '@marshallofsound/electron-router'
 import log from 'electron-log';
 import MenuBuilder from './menu';
 
@@ -24,7 +25,11 @@ export default class AppUpdater {
 }
 
 let mainWindow = null;
-
+const api = new Router('myapp');
+let me = { name: 'Samuel' };  
+api.get('me', (req, res) => {  
+  res.json(me);
+});
 if (process.env.NODE_ENV === 'production') {
   const sourceMapSupport = require('source-map-support');
   sourceMapSupport.install();
@@ -72,7 +77,6 @@ app.on('ready', async () => {
     width: 1024,
     height: 728
   });
-
   mainWindow.loadURL(`file://${__dirname}/app.html`);
 
   // @TODO: Use 'ready-to-show' event

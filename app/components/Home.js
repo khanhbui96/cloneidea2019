@@ -16,7 +16,7 @@
 // };
 
 // export default Home;
-import React from 'react';
+import React, {useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -27,7 +27,11 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Link from 'react-router-dom/Link'
+import Link from 'react-router-dom/Link';
+import axios from 'axios';
+import { rendererPreload } from '@marshallofsound/electron-router';
+rendererPreload();
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -52,7 +56,10 @@ const useStyles = makeStyles(theme => ({
 
 export default function Home() {
   const classes = useStyles();
-
+  useEffect(()=>{
+    axios.get('myapp://me')
+      .then(res=>console.log(res.data))
+  },[])
   return (
     <div className={classes.root}>
       <AppBar position="static">
